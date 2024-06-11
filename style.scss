@@ -1,0 +1,269 @@
+$green: #5e9e4d;
+$yellow: #ffc973;
+$darkgreen: #3a632f;
+$brown: #a85012;
+$gray: #ebebeb;
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: grotesk-gyatt;
+    src: url(BIGBOLDBOY.otf);
+}
+
+@font-face {
+    font-family: grotesk;
+    src: url(BOLDBOY.otf);
+}
+
+@font-face {
+    font-family: saprote;
+    src: url(SAPROTEPRO.otf);
+}
+
+@font-face {
+    font-family: vremena;
+    src: url(VremenaGroteskBold.otf);
+}
+
+
+
+body {
+    font-family: "Noto Sans Symbols", sans-serif;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -webkit-box-shadow: 17px -1px 38px -15px rgba(0, 0, 0, 0.26);
+    -moz-box-shadow: 17px -1px 38px -15px rgba(0, 0, 0, 0.26);
+    box-shadow: 17px -1px 38px -15px rgba(0, 0, 0, 0.26)
+}
+
+
+.sectiontop {
+    height: 100vh;
+    background: url(/hateniggsa.jpg) no-repeat 100% 50px;
+    background-size: contain;
+
+    .sped3wrapper {
+        display: flex;
+        align-items: end;
+    }
+
+    .sped-3 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        font-family: vremena;
+        gap: 1.5rem;
+
+        div {
+            border: 1px solid $gray;
+            border-radius: 20px;
+            background-color: $gray;
+            padding: 20px;
+
+        }
+
+        .section-1 {
+            grid-column: 1/span 2;
+        }
+
+        .section-22 {
+            background-color: white;
+        }
+    }
+
+    .leftbody {
+        padding: 0px 5%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+
+        .dummytxt {
+            margin-top: 1rem;
+            font-size: large;
+            line-height: 1.2rem;
+        }
+
+        .buttons-container {
+            margin-top: 4rem;
+            display: flex;
+            gap: 1rem;
+
+            button {
+                border: 2px;
+                border-radius: 999px;
+                font-size: larger;
+                padding: 0.9rem 2rem;
+                transition: all 200ms ease;
+                transform: translateY(0%);
+            }
+
+            button:hover {
+                background-color: black;
+                color: white;
+                -webkit-box-shadow: 15px 15px 30px -15px rgba(0, 0, 0, 0.3);
+                -moz-box-shadow: 15px 15px 30px -15px rgba(0, 0, 0, 0.3);
+                box-shadow: 15px 15px 30px -15px rgba(0, 0, 0, 0.3);
+                transform: translateY(-5%);
+            }
+
+            .primary-btn {
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+                width: max-content;
+            }
+
+            .second-btn {}
+        }
+
+        h1 {
+            font-family: grotesk;
+            font-size: 4rem;
+            line-height: 5.4rem;
+
+            .thick-baby {
+                position: relative;
+                font-family: grotesk-gyatt;
+                font-size: 6rem;
+                color: $darkgreen;
+
+                .dash {
+                    position: absolute;
+                    background-color: $yellow;
+                    top: 75%;
+                    left: 0px;
+                    height: 30px;
+                    width: 100%;
+                    z-index: -10;
+                }
+
+                img {
+                    position: absolute;
+                    width: 95px;
+                    top: 50%;
+                    transform: translateY(-25%);
+                    left: calc(100% + 10px);
+                }
+            }
+
+
+        }
+
+        .color {
+            color: $brown;
+        }
+    }
+}
+
+
+.content-container {
+    padding: 0px 5%;
+}
+
+.topheader {
+    border-bottom: 2px solid $green;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+
+    .logo {}
+
+    .topheader-right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        button {
+            border: none;
+            background-color: $green;
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            min-width: 60px;
+            color: white;
+        }
+
+        form {
+            display: flex;
+            border-top-right-radius: 26px;
+            border-bottom-right-radius: 26px;
+
+            input {
+                border: 0;
+
+                border-left: 3px solid $green;
+                border-bottom: 3px solid $green;
+                border-top: 3px solid $green;
+                border-top-left-radius: 12px;
+                border-bottom-left-radius: 12px;
+
+                padding: 0.5rem 1rem;
+                font-size: large;
+            }
+
+            button {
+                transform: translateX(-20px);
+            }
+        }
+
+    }
+}
+
+nav {
+    padding: 20px 20px;
+    display: flex;
+    gap: 3rem;
+
+    // a{
+    //     margin-right: 50px ;
+    // }
+    a {
+        color: black;
+        font-size: large;
+    }
+
+    a:hover {
+        background-color: $green;
+        border-radius: 10px;
+        transition: 10;
+    }
+}
+
+.profile {
+    position: relative;
+    margin-left: auto;
+
+    button {
+        background-color: transparent;
+        font-size: large;
+        border: none;
+        padding: 0.5rem 1rem;
+        text-transform: capitalize;
+        align-items: center;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+
+    .dropdowncontent {
+        background-color: black;
+        padding: 1rem;
+        position: absolute;
+        top: calc(100% + 10px);
+        left: 0;
+        color: white;
+        border-radius: 10px;
+        visibility: hidden;
+    }
+
+
+}
