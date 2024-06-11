@@ -154,7 +154,20 @@
     </div>
   </section>
 
-  <script src="./main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const button = document.getElementById('dropdown-toggle')
+      const content = document.getElementById('dropdown-content')
+
+      button.addEventListener('click', function () {
+        if (content.style.visibility == 'visible') {
+          content.style.visibility = 'hidden';
+        } else {
+          content.style.visibility = 'visible'
+        }
+      })
+    })
+  </script>
 </body>
 <!-- <img src="/asd.png" alt=""> -->
 
