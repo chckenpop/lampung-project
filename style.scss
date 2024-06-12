@@ -5,13 +5,26 @@ $brown: #a85012;
 $gray: #ebebeb;
 $darkgray: #808080;
 
+@mixin allButtons($val) {
+    @if $val==light {
+        border: 2px solid black;
+        background-color: white;
+    }
+
+    @else {
+        background-color: black;
+        border: 2px solid black;
+    }
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
     text-decoration: none;
     transition: all 0.25 ease-in 0s;
-    ::selection{
+
+    ::selection {
         background-color: $green;
     }
 }
@@ -121,6 +134,7 @@ body {
             display: flex;
             gap: 1rem;
 
+
             button {
                 border: 2px;
                 border-radius: 999px;
@@ -130,16 +144,40 @@ body {
                 transform: translateY(0%);
             }
 
-            button:hover {
+            button:nth-child(1) {
+                @include allButtons(black);
+            }
+
+            button:nth-child(2) {
+                @include allButtons(light);
+            }
+
+            .primary-btn:hover {
                 background-color: $green;
                 color: white;
+                border: 2px solid $green;
                 -webkit-box-shadow: 15px 15px 30px -15px rgba(0, 0, 0, 0.3);
                 -moz-box-shadow: 15px 15px 30px -15px rgba(0, 0, 0, 0.3);
                 box-shadow: 15px 15px 30px -15px rgba(0, 0, 0, 0.3);
                 transform: translateY(-5%);
             }
 
+            .second-btn:hover {
+                background-color: $green;
+                color: white;
+                transform: translateY(-5%);
+                border: 1px solid green;
+            }
+
+            .second-btn {
+                display: flex;
+                align-items: center;
+
+            }
+
             .primary-btn {
+                border: 2px solid black;
+                color: white;
                 display: flex;
                 gap: 0.5rem;
                 align-items: center;
@@ -288,4 +326,12 @@ nav {
     }
 
 
+}
+
+.part-2 {
+    height: 100vh;
+    background-color: $green;
+    border: 2px solid black;
+    border-top-left-radius: 999px;
+    border-bottom-left-radius: 999px;
 }
