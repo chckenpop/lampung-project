@@ -10,6 +10,10 @@ $darkgray: #808080;
     padding: 0;
     margin: 0;
     text-decoration: none;
+    transition: all 0.25 ease-in 0s;
+    ::selection{
+        background-color: $green;
+    }
 }
 
 @font-face {
@@ -56,7 +60,7 @@ body {
 
 .sectiontop {
     height: 100vh;
-    background: url(/hateniggsa.jpg) no-repeat 100% 50px;
+    background: url(/backg.jpg) no-repeat 100% 50px;
     background-size: contain;
 
     .sped3wrapper {
@@ -127,7 +131,7 @@ body {
             }
 
             button:hover {
-                background-color: black;
+                background-color: $green;
                 color: white;
                 -webkit-box-shadow: 15px 15px 30px -15px rgba(0, 0, 0, 0.3);
                 -moz-box-shadow: 15px 15px 30px -15px rgba(0, 0, 0, 0.3);
